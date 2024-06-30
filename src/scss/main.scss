@@ -39,9 +39,10 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-top: 20px;
             &--title {
                 font-size: 30px;
-                color: red;
+                color: #000;
             }
             &__img{
                 margin-bottom: 40px;
@@ -50,10 +51,16 @@ body {
             &--description {
                 font-size: 18px;
                 word-break: break-all;
+                color: #555;
             }
             &__rating {
                 display: flex;
                 flex-direction: column;
+                &--title {
+                    font-size: 30px;
+                    color: red;
+                    margin-left: 10px;
+                };
                 &__score {
                     display: flex;
                 }

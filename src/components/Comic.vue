@@ -8,18 +8,18 @@
       :alt="currentComic.alt"
       class="comics__container__comic__img"
     >
-    <div class="comics__container__comic__info">
+    <div class="comics__container__comic__info" v-if="getTranscript !== '-'">
       <span class="comics__container__comic--title">Transcript</span>
       <p class="comics__container__comic--description" v-html="getTranscript">
       </p>
     </div>
     <div class="comics__container__comic__info">
-      <span class="comics__container__comic--title">Date (DD/MM/AAA)</span>
+      <span class="comics__container__comic--title">Publish date</span>
       <p class="comics__container__comic--description">
         {{ getDate }}
       </p>
     </div>
-    <div class="comics__container__comic__info">
+    <div class="comics__container__comic__info" v-if="getInfo(currentComic.link) !== '-'">
       <span class="comics__container__comic--title">Link</span>
       <p class="comics__container__comic--description">
         {{ getInfo(currentComic.link) }}

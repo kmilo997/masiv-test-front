@@ -1,5 +1,8 @@
 <template>
   <div class="comics__container__comic__rating">
+    <span class="comics__container__comic__rating--title" v-if="hasScored">
+      ¡This comic has been scored!
+    </span>
     <div class="comics__container__comic__rating__score">
       <div
         @click="applyScore(score)"
@@ -12,9 +15,6 @@
         {{ score }}
       </div>
     </div>
-    <span class="comics__container__comic--title" v-if="hasScored">
-      ¡This comic has been scored!
-    </span>
   </div>
 </template>
 
