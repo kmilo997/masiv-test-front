@@ -1,0 +1,84 @@
+body {
+    margin: 0px;
+}
+.comics {
+    font-family: sans-serif;
+    &__navbar{
+        height: 40px;
+        background-color: #2271b3;
+        display: flex;
+        align-items: center;
+        &--title {
+            font-size: 30px;
+            color: #ffff;
+            margin-left: 10px;
+        };
+    }
+    &__container{
+        display: flex;
+        margin-top: 20px;
+        margin-left: 100px;
+        margin-right: 100px;
+        flex-direction: column;
+        &__options {
+            display: flex;
+            align-items: center;
+            &--item {
+                border: 2px black solid;
+                border-radius: 8px;
+                font-size: 20px;
+                padding: 10px;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+            &--text {
+                font-size: 20px;
+            }
+        }
+        &__comic {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &--title {
+                font-size: 30px;
+                color: red;
+            }
+            &__img{
+                margin-bottom: 40px;
+                margin-top: 20px;
+            }
+            &--description {
+                font-size: 18px;
+                word-break: break-all;
+            }
+            &__rating {
+                display: flex;
+                flex-direction: column;
+                &__score {
+                    display: flex;
+                }
+                &--item {
+                    font-size: 50px;
+                    border: 2px black solid;
+                    border-radius: 8px;
+                    padding: 10px;
+                    margin: 10px;
+                    cursor: pointer;
+
+                    &-checked {
+                        background-color: yellow;
+                    }
+
+                    &-disabled {
+                        cursor: initial;
+                    }
+                }
+            }
+            &__info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}
